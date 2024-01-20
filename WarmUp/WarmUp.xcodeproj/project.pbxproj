@@ -14,6 +14,8 @@
 		38C64E782B5C27C600EF6831 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C64E772B5C27C600EF6831 /* SimpleView.swift */; };
 		38C64E7A2B5C2B7C00EF6831 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C64E792B5C2B7C00EF6831 /* LayoutView.swift */; };
 		38C64E7C2B5C2CC000EF6831 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C64E7B2B5C2CC000EF6831 /* MyButton.swift */; };
+		38C64E7E2B5C490900EF6831 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C64E7D2B5C490900EF6831 /* OnboardingView.swift */; };
+		38C64E802B5C4D2600EF6831 /* ShortDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C64E7F2B5C4D2600EF6831 /* ShortDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		38C64E772B5C27C600EF6831 /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
 		38C64E792B5C2B7C00EF6831 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
 		38C64E7B2B5C2CC000EF6831 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		38C64E7D2B5C490900EF6831 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		38C64E7F2B5C4D2600EF6831 /* ShortDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				38C64E6B2B5C252A00EF6831 /* ContentView.swift */,
 				38C64E772B5C27C600EF6831 /* SimpleView.swift */,
 				38C64E792B5C2B7C00EF6831 /* LayoutView.swift */,
+				38C64E7D2B5C490900EF6831 /* OnboardingView.swift */,
+				38C64E7F2B5C4D2600EF6831 /* ShortDescription.swift */,
 				38C64E7B2B5C2CC000EF6831 /* MyButton.swift */,
 				38C64E6D2B5C252B00EF6831 /* Assets.xcassets */,
 				38C64E6F2B5C252B00EF6831 /* Preview Content */,
@@ -148,7 +154,9 @@
 			files = (
 				38C64E6C2B5C252A00EF6831 /* ContentView.swift in Sources */,
 				38C64E7A2B5C2B7C00EF6831 /* LayoutView.swift in Sources */,
+				38C64E802B5C4D2600EF6831 /* ShortDescription.swift in Sources */,
 				38C64E7C2B5C2CC000EF6831 /* MyButton.swift in Sources */,
+				38C64E7E2B5C490900EF6831 /* OnboardingView.swift in Sources */,
 				38C64E782B5C27C600EF6831 /* SimpleView.swift in Sources */,
 				38C64E6A2B5C252A00EF6831 /* WarmUpApp.swift in Sources */,
 			);
