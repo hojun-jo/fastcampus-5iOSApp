@@ -67,13 +67,8 @@
 			children = (
 				38C64E692B5C252A00EF6831 /* WarmUpApp.swift */,
 				38C64E6B2B5C252A00EF6831 /* ContentView.swift */,
-				38C64E772B5C27C600EF6831 /* SimpleView.swift */,
-				38C64E792B5C2B7C00EF6831 /* LayoutView.swift */,
-				38C64E7D2B5C490900EF6831 /* OnboardingView.swift */,
-				38C64E812B5C4F8C00EF6831 /* ListLoopView.swift */,
-				38E147E12B5D6B3F003143F7 /* SettingView.swift */,
-				38C64E7F2B5C4D2600EF6831 /* ShortDescription.swift */,
-				38C64E7B2B5C2CC000EF6831 /* MyButton.swift */,
+				38E147E42B5D77B6003143F7 /* 02 */,
+				38E147E32B5D77A0003143F7 /* 01 */,
 				38C64E6D2B5C252B00EF6831 /* Assets.xcassets */,
 				38C64E6F2B5C252B00EF6831 /* Preview Content */,
 			);
@@ -86,6 +81,27 @@
 				38C64E702B5C252B00EF6831 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		38E147E32B5D77A0003143F7 /* 01 */ = {
+			isa = PBXGroup;
+			children = (
+				38C64E772B5C27C600EF6831 /* SimpleView.swift */,
+				38C64E792B5C2B7C00EF6831 /* LayoutView.swift */,
+				38C64E7D2B5C490900EF6831 /* OnboardingView.swift */,
+				38C64E7B2B5C2CC000EF6831 /* MyButton.swift */,
+				38C64E7F2B5C4D2600EF6831 /* ShortDescription.swift */,
+			);
+			path = 01;
+			sourceTree = "<group>";
+		};
+		38E147E42B5D77B6003143F7 /* 02 */ = {
+			isa = PBXGroup;
+			children = (
+				38C64E812B5C4F8C00EF6831 /* ListLoopView.swift */,
+				38E147E12B5D6B3F003143F7 /* SettingView.swift */,
+			);
+			path = 02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
