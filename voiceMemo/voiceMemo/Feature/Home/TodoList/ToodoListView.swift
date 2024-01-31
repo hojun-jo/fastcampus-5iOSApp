@@ -36,6 +36,19 @@ struct TodoListView: View {
                         .padding(.top, 20)
                 }
             }
+            
+            WriteTodoButtonView()
+                .padding(.trailing, 20)
+                .padding(.bottom, 50)
+        }
+        .alert(
+            "To do list \(todoListViewModel.removeTodoCount)개 삭제하시겠습니까?",
+            isPresented: $todoListViewModel.isDisplayRemoveTodoAlert
+        ) {
+            Button("삭제", role: .destructive) {
+                todoListViewModel.removeButtonTapped()
+            }
+            Button("취소", role: .cancel) { }
         }
     }
 }
@@ -161,6 +174,30 @@ private struct TodoCellView: View {
             Rectangle()
                 .fill(Color.customGray0)
                 .frame(height: 1)
+        }
+    }
+}
+
+// MARK: - Todo 작성 버튼 뷰
+private struct WriteTodoButtonView: View {
+    @EnvironmentObject private var pathModel: PathModel
+    
+    fileprivate var body: some View {
+        VStack {
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                Button(
+                    action: {
+                        pathModel.paths.append(.todoView)
+                    },
+                    label: {
+                        Image("writeBtn")
+                    }
+                )
+            }
         }
     }
 }
