@@ -6,9 +6,49 @@
 import SwiftUI
 
 struct TodoView: View {
-  var body: some View {
-    Text("Todo")
-  }
+    @EnvironmentObject private var pathModel: PathModel
+    @EnvironmentObject private var todoListViewModel: TodoListViewModel
+    @StateObject private var todoViewModel = TodoViewModel()
+    
+    var body: some View {
+        VStack {
+            CustomNavigationBar(
+                leftButtonAction: {
+                    pathModel.paths.removeLast()
+                },
+                rightButtonAction: {
+                    todoListViewModel.addTodo(
+                        .init(
+                            title: todoViewModel.title,
+                            time: todoViewModel.time,
+                            day: todoViewModel.day,
+                            selected: false
+                        )
+                    )
+                    pathModel.paths.removeLast()
+                },
+                rightButtonType: .create
+            )
+            
+            TitleView()
+                .padding(.top, 20)
+            
+            Spacer()
+                .frame(height: 20)
+            
+            TodoTitleView(todoViewModel: todoViewModel)
+                .padding(.leading, 20)
+            
+            SelectTimeView(todoViewModel: todoViewModel)
+            
+            SelectDayView(todoViewModel: todoViewModel)
+                .padding(.leading, 20)
+            
+            Spacer()
+        }
+    }
+}
+
 // MARK: - 타이틀 뷰
 private struct TitleView: View {
     fileprivate var body: some View {
