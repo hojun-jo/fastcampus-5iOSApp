@@ -100,6 +100,65 @@ private struct TodoListContentView: View {
         }
     }
 }
+
+// MARK: - Todo 셀 뷰
+private struct TodoCellView: View {
+    @EnvironmentObject private var todoListViewModel: TodoListViewModel
+    @State private var isRemoveSelected: Bool
+    private var todo: Todo
+    
+    fileprivate init(
+        isRemoveSelected: Bool = false,
+        todo: Todo
+    ) {
+        _isRemoveSelected = State(initialValue: isRemoveSelected)
+        self.todo = todo
+    }
+    
+    fileprivate var body: some View {
+        VStack(spacing: 20) {
+            HStack {
+                if !todoListViewModel.isEditTodoMode {
+                    Button(
+                        action: { todoListViewModel.selectedBoxTapped(todo) },
+                        label: { todo.selected ? Image("selectedBox") : Image("unSelectedBox") }
+                    )
+                }
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(todo.title)
+                        .font(.system(size: 16))
+                        .foregroundStyle(todo.selected ? Color.customIconGray : .customBlack)
+                    
+                    Text(todo.convertedDayAndTime)
+                        .font(.system(size: 16))
+                        .foregroundStyle(Color.customIconGray)
+                }
+                
+                Spacer()
+                
+                if todoListViewModel.isEditTodoMode {
+                    Button(
+                        action: {
+                            isRemoveSelected.toggle()
+                            todoListViewModel.todoRemoveSelectedBoxTapped(todo)
+                        },
+                        label: {
+                            isRemoveSelected ? Image("selectedBox") : Image("unSelectedBox")
+                        }
+                    )
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 10)
+            
+            Rectangle()
+                .fill(Color.customGray0)
+                .frame(height: 1)
+        }
+    }
+}
+
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
         TodoListView()
