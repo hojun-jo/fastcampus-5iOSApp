@@ -27,8 +27,14 @@ struct TodoListView: View {
                 }
                 
                 TitleView()
+                    .padding(.top, 20)
                 
-                AnnouncementView()
+                if todoListViewModel.todos.isEmpty {
+                    AnnouncementView()
+                } else {
+                    TodoListContentView()
+                        .padding(.top, 20)
+                }
             }
         }
     }
@@ -93,7 +99,7 @@ private struct TodoListContentView: View {
                         .frame(height: 1)
                     
                     ForEach(todoListViewModel.todos, id: \.self) { todo in
-                        // TODO: - Todo cell view 넣어서 뷰 호출
+                        TodoCellView(todo: todo)
                     }
                 }
             }
