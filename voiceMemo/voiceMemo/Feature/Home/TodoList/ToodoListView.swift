@@ -27,6 +27,8 @@ struct TodoListView: View {
                 }
                 
                 TitleView()
+                
+                AnnouncementView()
             }
         }
     }
@@ -50,6 +52,26 @@ private struct TitleView: View {
         .padding(.leading, 20)
     }
 }
+
+// MARK: - TodoList 안내뷰
+private struct AnnouncementView: View {
+    fileprivate var body: some View {
+        VStack(spacing: 15) {
+            Spacer()
+            
+            Image("pendcil")
+                .renderingMode(.template)
+            Text("\"매일 아침 5시 운동하자!\"")
+            Text("\"내일 8시 수강 신청하자!\"")
+            Text("\"1시 반 점심약속 리마인드 해보자!\"")
+            
+            Spacer()
+        }
+        .font(.system(size: 16))
+        .foregroundStyle(Color.customGray2)
+    }
+}
+
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
         TodoListView()
