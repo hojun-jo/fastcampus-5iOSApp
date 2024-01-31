@@ -144,9 +144,9 @@ private struct SelectDayView: View {
                     .onChange(of: todoViewModel.day) { _ in
                         todoViewModel.setIsDisplayCalender(false)
                     }
-                    
-                    Spacer()
                 }
+                
+                Spacer()
             }
         }
     }
