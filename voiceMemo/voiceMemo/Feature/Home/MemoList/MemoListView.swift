@@ -158,9 +158,7 @@ private struct MemoCellView: View {
                                     isRemoveSelected.toggle()
                                     memoListViewModel.memoRemoveSelectedBoxTapped(memo)
                                 },
-                                label: {
-                                    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                                }
+                                label: { isRemoveSelected ? Image("selectedBox") : Image("unSelectedBox") }
                             )
                         }
                     }
