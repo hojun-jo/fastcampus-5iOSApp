@@ -23,6 +23,8 @@ struct OnboardingView: View {
             case .homeView:
               HomeView()
                 .navigationBarBackButtonHidden()
+                .environmentObject(todoListViewModel)
+                .environmentObject(memoListViewModel)
             case .todoView:
               TodoView()
                 .navigationBarBackButtonHidden()
